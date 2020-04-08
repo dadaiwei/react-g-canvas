@@ -9,7 +9,24 @@ class App extends React.Component {
     this.renderCanvas = this.renderCanvas.bind(this);
   }
   renderCanvas() {
-    const canvas = document.getElementById('canvas');
+    const canvas = new Canvas({
+      container: 'container',
+      width: 600,
+      height: 500,
+    });
+    console.log(canvas);
+    const shape = canvas.addShape('circle', {
+      attrs: {
+        x: 300,
+        y: 200,
+        r: 100,
+        fill: '#1890FF',
+        stroke: '#F04864',
+        lineWidth: 4,
+        radius: 8,
+      },
+    });
+    console.log(shape);
   }
   componentDidMount() {
     this.renderCanvas();
@@ -17,7 +34,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <canvas id="canvas"></canvas>
+        <div id="container"></div>
       </div>
     );
   }

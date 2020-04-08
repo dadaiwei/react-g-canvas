@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+Object.defineProperty(exports, "__esModule", {value: true});
 var tslib_1 = require("tslib");
 var g_base_1 = require("@antv/g-base");
 var event_contoller_1 = require("@antv/g-base/lib/event/event-contoller");
@@ -198,7 +198,7 @@ var Canvas = /** @class */ (function (_super) {
             this.set('drawFrame', drawFrame);
         }
     };
-    Canvas.prototype.skipDraw = function () { };
+    Canvas.prototype.skipDraw = function () {};
     Canvas.prototype.destroy = function () {
         var eventController = this.get('eventController');
         eventController.destroy();
